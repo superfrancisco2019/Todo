@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Todo from './Todo'
+import Todo from "./Todo/Todo";
 import "./App.css";
 
 function App() {
@@ -19,13 +19,23 @@ function App() {
 
   return (
     <div className="App">
-      <form className="main-frame">
-        <input className="input" value={input} onChange={(e) => setInput(e.target.value)} />
-        <button disabled={!input} type="submit" onClick={addTodo}>
+      <form className="main__frame">
+        <input
+          className="input"
+          value={input}
+          placeholder="What needs to be done?"
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button
+          className="new__todo__button"
+          disabled={!input}
+          type="submit"
+          onClick={addTodo}
+        >
           Add Todo
         </button>
       </form>
-      <ul className="elements-container">
+      <ul>
         {todos.map((todo) => (
           <Todo text={todo} />
         ))}

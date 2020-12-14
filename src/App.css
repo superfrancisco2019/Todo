@@ -1,26 +1,21 @@
-.App
-{
-text-align: center;
-
+ul {
+  padding-inline-start: 0;
 }
 
-.main-frame
-{
-
+.main__frame {
+  text-align: center;
 }
 
-.input
-{
+.input{
+  border-radius:4px;
+  opacity:40%;
+  text-align: center;
 
 }
-
-.elements-container{
-
-}
-
-.element{
-max-width: 80%;
-list-style-type: none;
-
+.new__todo__button {
+  background-color: #ff6666;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
 
 }
