@@ -11,7 +11,7 @@ function Todo(props) {
   };
 
   return (
-    <div className="todo__list__container">
+    <ul className="todo__list__container">
       <li className="todo__list">
         {props.text}{" "}
         <button className="check" onClick={isCompleted}>
@@ -19,7 +19,7 @@ function Todo(props) {
           &#10004;{" "}
         </button>
       </li>
-    </div>
+    </ul>
   );
 }
 

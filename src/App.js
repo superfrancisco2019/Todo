@@ -6,7 +6,7 @@ function App() {
   const [todos, setTodos] = useState([
     "Laver la vaisselle",
     "Sortir les poubelles",
-    "Aller sur Tinder",
+    "Nourrir le chat",
   ]);
 
   const [input, setInput] = useState("");
@@ -18,7 +18,8 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
+      <p className="title">TODO</p>
       <form className="main__frame">
         <input
           className="input"
@@ -35,11 +36,11 @@ function App() {
           Add Todo
         </button>
       </form>
-      <ul>
+      <div className="list__container">
         {todos.map((todo) => (
-          <Todo text={todo} />
+          <Todo classname="todo" text={todo} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

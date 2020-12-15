@@ -1,3 +1,19 @@
+.app{
+  margin-top:5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  height:300px
+}
+
+.title{
+  text-align: center;
+  opacity: 50%;
+  font-size: 35px;
+  margin:0
+}
+
 ul {
   padding-inline-start: 0;
 }
@@ -10,12 +26,15 @@ ul {
   border-radius:4px;
   opacity:40%;
   text-align: center;
-
+  height:25px;
 }
+
 .new__todo__button {
   background-color: #ff6666;
-  -webkit-border-radius: 28px;
-  -moz-border-radius: 28px;
-  border-radius: 28px;
-
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  height:25px
 }
+
+
