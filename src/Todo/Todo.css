@@ -20,13 +20,38 @@
   justify-content: space-around;
 }
 
+.todo__list__completed{
+  background-color: rgb(242, 237, 242);
+  list-style-type: none;
+  box-shadow: 1px 1px 2px grey;
+  border-radius: 4px;
+  width: calc(100% - 30px);
+  margin: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 50%;
+  text-decoration: line-through;
+}
+
 .check {
   color: green;
+  cursor: pointer;
+}
+
+.completed{
+  color: red;
+  
 }
 
 @media (min-width: 1000px) {
-  .todo__list {
-    width: calc(100% - 200px);
-    margin: 0 100px 0 100px;
-  }
+.todo__list {
+  width: calc(100% - 200px);
+  margin: 0 100px 0 100px;
+}
+
+.todo__list__completed{
+  width: calc(100% - 200px);
+  margin: 0 100px 0 100px;
+}
 }

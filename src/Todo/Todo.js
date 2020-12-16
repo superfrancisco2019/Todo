@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Todo.css";
 
 function Todo(props) {
-  const [isDone, setisDone] = useState();
+  const [isDone, setisDone] = useState(false);
 
   const isCompleted = (event) => {
     event.preventDefault();
@@ -12,9 +12,12 @@ function Todo(props) {
 
   return (
     <ul className="todo__list__container">
-      <li className="todo__list">
+      <li className={isDone ? "todo__list__completed" : "todo__list"}>
         {props.text}{" "}
-        <button className="check" onClick={isCompleted}>
+        <button
+          className={isDone ? "completed" : "check"}
+          onClick={isCompleted}
+        >
           {" "}
           &#10004;{" "}
         </button>

@@ -40,6 +40,7 @@ function App() {
         {todos.map((todo) => (
           <Todo classname="todo" text={todo} />
         ))}
+        
       </div>
     </div>
   );
