@@ -3,18 +3,15 @@ import Todo from "./Todo/Todo";
 import "./App.css";
 
 function App() {
-  const [todos, setTodos] = useState([
-    "Laver la vaisselle",
-    "Sortir les poubelles",
-    "Nourrir le chat",
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const [input, setInput] = useState("");
 
   const addTodo = (event) => {
     event.preventDefault();
-    setTodos([...todos, input]);
+    setTodos([...todos, { id: todos.length + 1, text: input }]);
     setInput("");
+    console.log(todos);
   };
 
   return (
@@ -38,9 +35,8 @@ function App() {
       </form>
       <div className="list__container">
         {todos.map((todo) => (
-          <Todo classname="todo" text={todo} />
+          <Todo classname="todo" text={todo.text} id={todo.id}/>
         ))}
-        
       </div>
     </div>
   );

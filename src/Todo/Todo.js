@@ -12,7 +12,10 @@ function Todo(props) {
 
   return (
     <ul className="todo__list__container">
-      <li className={isDone ? "todo__list__completed" : "todo__list"}>
+      <li
+        key={props.id}
+        className={isDone ? "todo__list__completed" : "todo__list"}
+      >
         {props.text}{" "}
         <button
           className={isDone ? "completed" : "check"}
