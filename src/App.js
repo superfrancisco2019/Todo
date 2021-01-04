@@ -3,6 +3,7 @@ import Todo from "./Todo/Todo";
 import "./App.css";
 
 function App() {
+  
   const [todos, setTodos] = useState([]);
 
   const [input, setInput] = useState("");
@@ -14,10 +15,15 @@ function App() {
     console.log(todos);
   };
 
+  const handleChange = (event) => {
+    event.preventDefault();
+    setTodos(todos.splice(todos.id, 1, event.target.value));
+  };
+
   return (
     <div className="app">
       <p className="title">TODO</p>
-      <form className="main__frame">
+      <form className="main__frame" onSubmit={addTodo}>
         <input
           className="input"
           value={input}
@@ -25,17 +31,17 @@ function App() {
           onChange={(e) => setInput(e.target.value)}
         />
         <button
-          className="new__todo__button"
+          className="new__button"
           disabled={!input}
           type="submit"
-          onClick={addTodo}
+          
         >
           Add Todo
         </button>
       </form>
       <div className="list__container">
         {todos.map((todo) => (
-          <Todo classname="todo" text={todo.text} id={todo.id}/>
+          <Todo classname="todo" handleChange={handleChange} text={todo.text} id={todo.id} key={todo.id}/>
         ))}
       </div>
     </div>
